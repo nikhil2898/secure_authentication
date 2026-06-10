@@ -9,6 +9,8 @@ import {
   verifyUser,
   refreshCSRFToken,
   adminController,
+  forgotPassword,
+  resetPassword,
 } from "../controllers/authControllers.js";
 import { authorizedAdmin, isAuth } from "../middlewares/authMiddleware.js";
 import { verifyCsrfToken } from "../middlewares/csrfMiddleware.js";
@@ -19,6 +21,8 @@ router.post("/register", register);
 router.post("/verify/:token", verifyUser);
 router.post("/login", loginUser);
 router.post("/verify-otp", verifyOtp);
+router.post("/forgot",forgotPassword);
+router.post("/reset/:token",resetPassword);
 
 router.get("/me", isAuth, myProfile);
 

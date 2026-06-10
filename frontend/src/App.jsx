@@ -8,6 +8,8 @@ import Register from "./pages/Register";
 import { AppData } from "./context/AppContext";
 import Loading from "./loading";
 import Dashboard from "./pages/Dashboard";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 const App = () => {
 
@@ -29,6 +31,10 @@ const App = () => {
             <Route path="/token/:token" element={isAuth ? <Home /> : <Verify />} />
 
             <Route path='/dashboard' element={isAuth ? <Dashboard /> : <Login />} />
+
+            <Route path="/forgot" element={isAuth ? <Home /> : <ForgotPassword />} />
+
+            <Route path="/reset/:token" element={isAuth ? <Home /> : <ResetPassword />} />
           </Routes>
           <ToastContainer />
         </BrowserRouter>

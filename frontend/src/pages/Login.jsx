@@ -86,6 +86,7 @@ const Login = () => {
             <Link to={"/register"} className="text-xs text-gray-500 mt-3">
               Don't have an account?
             </Link>
+            <Link to={"/forgot"} className="text-xs text-gray-500 mt-3">Forgot Password?</Link>
           </form>
         </div>
       </section>

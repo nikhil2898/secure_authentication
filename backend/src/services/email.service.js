@@ -43,3 +43,8 @@ export const sendOtpEmail = async(userEmail,html) => {
     const subject = "Otp for verification";
     await sendEmail(userEmail,subject,html);
 }
+
+export const sendForgotPassword = async(userEmail,html) => {
+    const subject = "Reset Your Password";
+    await sendEmail(userEmail,subject,html);
+}
